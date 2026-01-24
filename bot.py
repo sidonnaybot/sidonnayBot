@@ -27,7 +27,7 @@ ANNOUNCE_INTERVAL = 900
 # ================= env =================
 
 SERVER = "irc.chat.twitch.tv"
-PORT = 6697
+PORT = 443
 
 BOT_NICK = os.getenv("BOT_NICK")
 OAUTH_TOKEN = os.getenv("OAUTH_TOKEN")
