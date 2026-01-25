@@ -23,7 +23,7 @@ BANNED_WORDS = [
 WARN_RESET_TIME = 600
 BANNED_TIMEOUT = 600
 
-ANNOUNCE_TEXT = "telegram t.me/sidonnay"
+ANNOUNCE_TEXT = "tg t.me/sidonnay TehePelo"
 ANNOUNCE_INTERVAL = 900
 
 # ================= env =================
@@ -216,7 +216,7 @@ while True:
             if uid:
                 timeout_user(uid, CAPS_TIMEOUT, "тайм-аут за повторный caps lock")
         else:
-            sock.send(f"PRIVMSG {CHANNEL} :@{username} выключите caps lock\r\n".encode())
+            sock.send(f"PRIVMSG {CHANNEL} :@{username} пожалуйста, выключите caps lock\r\n".encode())
         continue
 
     # ===== commands =====
