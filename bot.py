@@ -61,6 +61,7 @@ print("бот подключился к twitch")
 caps_warns = {}
 banned_warns = {}
 stream_online = False
+stream_greeted = False
 
 def reset_warns():
     while True:
@@ -161,8 +162,18 @@ threading.Thread(target=announce_loop, daemon=True).start()
 
 def stream_status_loop():
     global stream_online
+    global stream_greeted
+
     while True:
         stream_online = is_stream_online()
+
+        if stream_online and not stream_greeted:
+            sock.send(f"PRIVMSG {CHANNEL} :доброе утро, Нана 🌸\r\n".encode())
+            stream_greeted = True
+
+        if not stream_online:
+            stream_greeted = False
+
         time.sleep(30)
 
 threading.Thread(target=stream_status_loop, daemon=True).start()
