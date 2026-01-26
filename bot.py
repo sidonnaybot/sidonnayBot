@@ -227,7 +227,7 @@ while True:
             if uid:
                 timeout_user(uid, CAPS_TIMEOUT, "тайм-аут за повторный caps lock")
         else:
-            sock.send(f"PRIVMSG {CHANNEL} :@{username} пожалуйста, выключите caps lock\r\n".encode())
+            sock.send(f"PRIVMSG {CHANNEL} :@{username} выключите caps lock\r\n".encode())
         continue
 
     # ===== commands =====
