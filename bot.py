@@ -201,7 +201,7 @@ while True:
     except:
         continue
 
-    if username in ["sidonnay", "sidonnaybot", "sleepystephan", "lexus421991"]:
+    if username in ["sidonnay", "sidonnaybot"]:
         continue
 
     # ===== ban word =====
