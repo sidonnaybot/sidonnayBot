@@ -7,8 +7,8 @@ import os
 
 # ================= settings =================
 
-CAPS_MIN_LETTERS = 14
-CAPS_PERCENT = 0.7
+CAPS_MIN_LETTERS = 18
+CAPS_PERCENT = 0.8
 CAPS_TIMEOUT = 60
 
 BANNED_WORDS = [
@@ -17,7 +17,7 @@ BANNED_WORDS = [
     "даун","дауны","дауна","пидики","куколды","куколдов","педиков","пидоров",
     "черномазый","черномазых","негров","нигеров","кацап","кацапы","кацапов","глиномес",
     "глиномесы","глиномесов","пендосы","пендосов","пендостан","жидов","пидрила","пидормот",
-    "пидорашка","черножопый","чуркобес","ауловец","рашист","инцел","исламист","негренок",
+    "пидорашка","черножопый","чуркобес","ауловец","рашист","инцел","негренок",
 ]
 
 WARN_RESET_TIME = 600
@@ -241,3 +241,5 @@ while True:
         sock.send(f"PRIVMSG {CHANNEL} :https://youtube.com/@sidonnay\r\n".encode())
     elif msg == "!instagram":
         sock.send(f"PRIVMSG {CHANNEL} :https://instagram.com/sidonnay\r\n".encode())
+    elif msg == "!фильм":
+        sock.send(f"PRIVMSG {CHANNEL} :Троя PopCorn\r\n".encode())
