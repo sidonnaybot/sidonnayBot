@@ -236,10 +236,10 @@ while True:
     if msg == "!tg":
         sock.send(f"PRIVMSG {CHANNEL} :https://t.me/sidonnay\r\n".encode())
     elif msg == "!boosty":
-        sock.send(f"PRIVMSG {CHANNEL} :https://boosty.to/sidonnay\r\n".encode())
+        sock.send(f"PRIVMSG {CHANNEL} :записи просмотровых https://boosty.to/sidonnay PopCorn\r\n".encode())
     elif msg == "!youtube":
-        sock.send(f"PRIVMSG {CHANNEL} :https://youtube.com/@sidonnay\r\n".encode())
+        sock.send(f"PRIVMSG {CHANNEL} :записи стримоу https://youtube.com/@sidonnay TPFufun\r\n".encode())
     elif msg == "!instagram":
-        sock.send(f"PRIVMSG {CHANNEL} :https://instagram.com/sidonnay\r\n".encode())
+        sock.send(f"PRIVMSG {CHANNEL} :https://instagram.com/sidonnay MorphinTime\r\n".encode())
     elif msg == "!фильм":
         sock.send(f"PRIVMSG {CHANNEL} :Троя PopCorn\r\n".encode())
