@@ -7,8 +7,8 @@ import os
 
 # ================= settings =================
 
-CAPS_MIN_LETTERS = 18
-CAPS_PERCENT = 0.8
+CAPS_MIN_LETTERS = 14
+CAPS_PERCENT = 0.7
 CAPS_TIMEOUT = 60
 
 BANNED_WORDS = [
