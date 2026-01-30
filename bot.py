@@ -4,6 +4,7 @@ import requests
 import time
 import threading
 import os
+import re
 
 # ================= settings =================
 
@@ -134,8 +135,14 @@ def is_caps(msg):
     return sum(c.isupper() for c in letters) / len(letters) >= CAPS_PERCENT
 
 def contains_banned(msg):
-    msg = msg.lower()
-    return any(word in msg for word in BANNED_WORDS)
+    text = msg.lower()
+
+    for word in BANNED_WORDS:
+        pattern = r'\b' + re.escape(word) + r'\b'
+        if re.search(pattern, text):
+            return True
+
+    return False
 
 # ================= announce =================
 
@@ -168,7 +175,7 @@ def stream_status_loop():
         stream_online = is_stream_online()
 
         if stream_online and not stream_greeted:
-            sock.send(f"PRIVMSG {CHANNEL} :Здравствуйте, Нана 🌸\r\n".encode())
+            sock.send(f"PRIVMSG {CHANNEL} :Здравствуйте, Нана. Бот обновлён! 🌸\r\n".encode())
             stream_greeted = True
 
         if not stream_online:
