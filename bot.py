@@ -175,7 +175,7 @@ def stream_status_loop():
         stream_online = is_stream_online()
 
         if stream_online and not stream_greeted:
-            sock.send(f"PRIVMSG {CHANNEL} :Здравствуйте, Нана🌸\r\n".encode())
+            sock.send(f"PRIVMSG {CHANNEL} :Команда фильм обновлена.\r\n".encode())
             stream_greeted = True
 
         if not stream_online:
@@ -249,4 +249,4 @@ while True:
     elif msg == "!instagram":
         sock.send(f"PRIVMSG {CHANNEL} :https://instagram.com/sidonnay MorphinTime\r\n".encode())
     elif msg == "!фильм":
-        sock.send(f"PRIVMSG {CHANNEL} :Троя PopCorn\r\n".encode())
+        sock.send(f"PRIVMSG {CHANNEL} :Солдаты неудачи PopCorn\r\n".encode())
