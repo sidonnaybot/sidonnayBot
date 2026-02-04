@@ -8,7 +8,7 @@ import re
 
 # ================= settings =================
 
-CAPS_MIN_LETTERS = 14
+CAPS_MIN_LETTERS = 34
 CAPS_PERCENT = 0.7
 CAPS_TIMEOUT = 60
 
@@ -175,7 +175,7 @@ def stream_status_loop():
         stream_online = is_stream_online()
 
         if stream_online and not stream_greeted:
-            sock.send(f"PRIVMSG {CHANNEL} :Команда фильм обновлена\r\n".encode())
+            sock.send(f"PRIVMSG {CHANNEL} :\r\n".encode())
             stream_greeted = True
 
         if not stream_online:
