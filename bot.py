@@ -8,7 +8,7 @@ import re
 
 # ================= settings =================
 
-CAPS_MIN_LETTERS = 34
+CAPS_MIN_LETTERS = 44
 CAPS_PERCENT = 0.7
 CAPS_TIMEOUT = 60
 
@@ -26,6 +26,12 @@ BANNED_TIMEOUT = 600
 
 ANNOUNCE_TEXT = "tg t.me/sidonnay TehePelo"
 ANNOUNCE_INTERVAL = 900
+
+ANNOUNCE_COLORS = [
+    "purple",
+    "blue",
+    "green"
+]
 
 # ================= env =================
 
@@ -63,6 +69,8 @@ caps_warns = {}
 banned_warns = {}
 stream_online = False
 stream_greeted = False
+
+announce_color_index = 0
 
 def reset_warns():
     while True:
@@ -147,9 +155,14 @@ def contains_banned(msg):
 # ================= announce =================
 
 def announce_loop():
+    global announce_color_index
+
     while True:
         time.sleep(ANNOUNCE_INTERVAL)
         if stream_online:
+
+            color = ANNOUNCE_ COLORS[announce_color_index]
+            
             requests.post(
                 "https://api.twitch.tv/helix/chat/announcements",
                 headers=HEADERS,
@@ -159,9 +172,11 @@ def announce_loop():
                 },
                 json={
                     "message": ANNOUNCE_TEXT,
-                    "color": "purple"
+                    "color": color
                 }
             )
+
+            announce_color_index = (announce_color_index + 1) % len(ANNOUNCE_COLORS)
 
 threading.Thread(target=announce_loop, daemon=True).start()
 
