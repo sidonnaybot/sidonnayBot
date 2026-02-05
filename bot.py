@@ -161,7 +161,7 @@ def announce_loop():
         time.sleep(ANNOUNCE_INTERVAL)
         if stream_online:
 
-            color = ANNOUNCE_ COLORS[announce_color_index]
+            color = ANNOUNCE_COLORS[announce_color_index]
             
             requests.post(
                 "https://api.twitch.tv/helix/chat/announcements",
