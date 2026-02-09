@@ -29,8 +29,7 @@ ANNOUNCE_INTERVAL = 450
 
 ANNOUNCE_COLORS = [
     "purple",
-    "blue",
-    "green"
+    "primary"
 ]
 
 # ================= env =================
