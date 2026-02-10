@@ -267,4 +267,4 @@ while True:
     elif msg == "!фильм":
         sock.send(f"PRIVMSG {CHANNEL} :Солдаты неудачи PopCorn\r\n".encode())
     elif msg == "!озвучка":
-        sock.send(f"PRIVMSG {CHANNEL} :https://steamcommunity.com/sharedfiles/filedetails/?id=3218403501&searchtext=%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B7%D0%B2%D1%83%D1%87%D0%BA%D0%B0\r\n".encode())
+        sock.send(f"PRIVMSG {CHANNEL} :https://inlnk.ru/DB36GQ\r\n".encode())
