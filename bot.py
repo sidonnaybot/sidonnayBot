@@ -190,7 +190,7 @@ def stream_status_loop():
         stream_online = is_stream_online()
 
         if stream_online and not stream_greeted:
-            sock.send(f"PRIVMSG {CHANNEL} :Здравствуйте, Нана 🌸\r\n".encode())
+            sock.send(f"PRIVMSG {CHANNEL} :Здравствуйте, Нана🌸\r\n".encode())
             stream_greeted = True
 
         if not stream_online:
